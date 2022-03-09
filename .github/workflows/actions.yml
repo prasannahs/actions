@@ -16,4 +16,4 @@ jobs:
       - name: run the test
         run: |
           npm install
-          npx run teste2e
+          npx npm run teste2e
