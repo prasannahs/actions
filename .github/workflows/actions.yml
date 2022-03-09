@@ -7,7 +7,7 @@ jobs:
      runs-on: windows-latest
      steps:
        - name: Install node
-       - uses: actions/checkout@71899b7d7d90c887a0de82b852fcbdf84c375586
+       - uses: actions/checkout@v2
        - uses: actions/setup-node@v2
          with:
            node-version: 14
