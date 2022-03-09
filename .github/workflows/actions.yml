@@ -4,17 +4,16 @@ on: [push]
 
 jobs:
   install-dependncies:
-     runs-on: windows-latest
-     steps:
-       - name: Checkout to latest commit
-         uses: actions/checkout@v2
+    runs-on: windows-latest
+    steps:
+      - name: Checkout to latest commit
+        uses: actions/checkout@v2
 
-       - name: install node
-       - uses: actions/setup-node@v2
-         with:
-           node-version: 14
-       - name: Execute test
-         run: |
+      - name: install node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - name: run the test
+        run: |
           npm install
           npx run teste2e
-          
