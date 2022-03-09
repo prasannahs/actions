@@ -1,0 +1,13 @@
+name: Sanity Check Action
+
+on: [push]
+
+jobs:
+  install-dependncies:
+     runs-on: windows-latest
+     steps:
+       - name: Install packages
+         run: yarn install
+       - name: Execute test
+         run: |
+          npx cypress run --env environment=SIT,brand=LCPR,TAGS="@LCPR" --config-file apps/clients/ubc-consumer-e2e/cypress.json
