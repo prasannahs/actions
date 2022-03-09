@@ -15,5 +15,5 @@ jobs:
           node-version: 14
       - name: run the test
         run: |
-          npm install
-          npx npm run teste2e
+          yarn install
+          yarn run teste2e
