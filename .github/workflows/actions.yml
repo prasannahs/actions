@@ -9,11 +9,22 @@ jobs:
       - name: Checkout to latest commit
         uses: actions/checkout@v2
 
-      - name: install node
+      - name: Setup node
         uses: actions/setup-node@v2
         with:
           node-version: 14
-      - name: run the test
+          cache: yarn
+
+      - name: cache-node_modules
+        id: cache-node-modules
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-14-nodemodules-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-14-nodemodules-
+
+      - name: install dependencies
         run: |
           yarn install
           yarn run teste2e
