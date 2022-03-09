@@ -6,8 +6,12 @@ jobs:
   install-dependncies:
      runs-on: windows-latest
      steps:
-       - name: Install packages
-         run: yarn install
+       - name: Install node
+       - uses: actions/checkout@v2
+       - uses: actions/setup-node@v2
+         with:
+           node-version: 14
        - name: Execute test
          run: |
-          npx cypress run --env environment=SIT,brand=LCPR,TAGS="@LCPR" --config-file apps/clients/ubc-consumer-e2e/cypress.json
+          npm install
+          npx run teste2e

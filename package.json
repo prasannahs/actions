@@ -1,0 +1,22 @@
+{
+  "name": "actions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "teste2e": "npx cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prasannahs/actions.git"
+  },
+  "author": "Prasanna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prasannahs/actions/issues"
+  },
+  "homepage": "https://github.com/prasannahs/actions#readme",
+  "devDependencies": {
+    "cypress": "^9.5.1"
+  }
+}
